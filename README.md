@@ -1,1 +1,1 @@
-# opensource-happy-birthday-website
+# Opensource Happy Birthday Website
