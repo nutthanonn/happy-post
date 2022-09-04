@@ -32,7 +32,7 @@ export default Breadcrumb;
 
 const Box = styled.div`
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 `;

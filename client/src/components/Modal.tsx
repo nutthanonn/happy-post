@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import avatar from "../assets/avatar.png";
 import { keyframes } from "@emotion/react";
-import Draggable from "react-draggable"; // The default
 
 interface ModalProps {
   closeModal: () => void;
@@ -18,22 +17,20 @@ const Modal: FC<ModalProps> = (props) => {
 
   return (
     <Box onClick={handleClick}>
-      <Draggable>
-        <Container>
-          <form action="">
-            <BoxTitle>
-              <Img src={avatar} />
-              <InputCustom
-                type="text"
-                placeholder="Name or Unnamed"
-                maxLength={20}
-              />
-            </BoxTitle>
-            <TextareaCustom placeholder="Have a great time on your birthday...."></TextareaCustom>
-            <Button>submit</Button>
-          </form>
-        </Container>
-      </Draggable>
+      <Container>
+        <form action="">
+          <BoxTitle>
+            <Img src={avatar} />
+            <InputCustom
+              type="text"
+              placeholder="Name or Unnamed"
+              maxLength={20}
+            />
+          </BoxTitle>
+          <TextareaCustom placeholder="Have a great time on your birthday...."></TextareaCustom>
+          <Button>submit</Button>
+        </form>
+      </Container>
     </Box>
   );
 };
@@ -69,7 +66,10 @@ const Container = styled.div`
   border-radius: 10px;
   border: 1px solid #ffc4d0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  cursor: move;
+  @media only screen and (max-width: 500px) {
+    width: 300px;
+    left: calc(50% - 300px / 2);
+  }
 
   > form {
     margin: 2rem;
@@ -121,10 +121,11 @@ const TextareaCustom = styled.textarea`
 
 const Button = styled.button`
   width: 80px;
-  background-color: #d3dedc;
+  background-color: #8ed6ff;
   border-radius: 5px;
   outline: none;
   border: none;
   cursor: pointer;
   padding: 5px 10px;
+  color: #61481c;
 `;

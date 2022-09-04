@@ -16,6 +16,7 @@ const Text = styled.a`
   color: #92a9bd;
   position: relative;
   text-decoration: none;
+  font-size: 2vw;
   &:after {
     content: "";
     position: absolute;

@@ -30,7 +30,7 @@ export default Card;
 
 const Box = styled.div`
   display: block;
-  width: 500px;
+  width: 50vw;
   height: auto;
 
   padding: 2rem;
@@ -41,6 +41,7 @@ const Box = styled.div`
 
 const Text = styled.p`
   color: #7c99ac;
+  font-size: 2vw;
 `;
 
 const CardHeader = styled.div`
@@ -54,7 +55,7 @@ const CardIcon = styled.img`
   position: absolute;
   top: -10px;
   right: 0;
-  width: 20px;
+  width: 3vw;
 `;
 
 const CardTitle = styled.div``;
@@ -62,13 +63,14 @@ const CardTitle = styled.div``;
 const CardName = styled.p`
   margin: 0;
   padding: 0;
+  font-size: 2vw;
 `;
 
 const CardTime = styled.p`
   margin: 0;
   padding: 0;
   color: #7c99ac;
-  font-size: 10px;
+  font-size: 2vw;
 `;
 
 const CardAvatar = styled.img`

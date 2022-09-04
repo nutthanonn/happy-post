@@ -35,6 +35,6 @@ const Content = styled.div`
 const H1 = styled.h1`
   color: #7c99ac;
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 10vw;
   margin: 0;
 `;
