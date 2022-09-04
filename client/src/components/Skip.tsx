@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
+import { device } from "../common/screensize";
 
 const Skip: FC = () => {
   return (
@@ -32,5 +33,8 @@ const Text = styled.a`
   &:hover::after {
     transform: scaleX(1);
     transition: transform 0.5s ease;
+  }
+  @media screen and (${device.mobileL}) {
+    font-size: 4vw;
   }
 `;

@@ -16,7 +16,7 @@ const Card: FC<CardProps> = (props) => {
       <CardHeader>
         <CardAvatar src={randomProfile()} />
         <CardTitle>
-          <CardName>From Nutthanon</CardName>
+          <CardName>From Example</CardName>
           <CardTime>3 Sept 2022</CardTime>
         </CardTitle>
         <CardIcon src={cake} />
@@ -41,7 +41,7 @@ const Box = styled.div`
 
 const Text = styled.p`
   color: #7c99ac;
-  font-size: 2vw;
+  font-size: 1.5vw;
 `;
 
 const CardHeader = styled.div`
@@ -53,7 +53,7 @@ const CardHeader = styled.div`
 
 const CardIcon = styled.img`
   position: absolute;
-  top: -10px;
+  top: 10px;
   right: 0;
   width: 3vw;
 `;
@@ -63,14 +63,14 @@ const CardTitle = styled.div``;
 const CardName = styled.p`
   margin: 0;
   padding: 0;
-  font-size: 2vw;
+  font-size: 1.7vw;
 `;
 
 const CardTime = styled.p`
   margin: 0;
   padding: 0;
   color: #7c99ac;
-  font-size: 2vw;
+  font-size: 1vw;
 `;
 
 const CardAvatar = styled.img`

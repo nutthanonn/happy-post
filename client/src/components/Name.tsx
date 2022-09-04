@@ -1,15 +1,12 @@
 import React from "react";
 import { FC } from "react";
 import styled from "@emotion/styled";
+import { NAME } from "../config";
 
 const Name: FC = () => {
-  const fname = "nutthanon";
-  const lname = "thongcharoen";
   return (
     <Box>
-      <H>
-        {fname} {lname}
-      </H>
+      <H>{NAME}</H>
     </Box>
   );
 };

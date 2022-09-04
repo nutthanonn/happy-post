@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
 import { Routes, Route } from "react-router-dom";
+import "./config";
 
 const App: FC = () => {
   return (

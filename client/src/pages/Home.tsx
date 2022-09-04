@@ -5,6 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import Avatar from "../components/Avatar";
 import Name from "../components/Name";
 import Skip from "../components/Skip";
+import BirthdayCalendar from "../components/BirthdayCalendar";
 
 const Home: FC = () => {
   const [play, isPlay] = useState<boolean>(false);
@@ -25,11 +26,12 @@ const Home: FC = () => {
           />
           <Avatar />
           <Name />
+          <Skip />
+          <BirthdayCalendar />
         </Content>
       ) : (
         <Title />
       )}
-      <Skip />
     </Box>
   );
 };

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { TextAnimation } from "../common/textAnimation.common";
 
 const Title: FC = () => {
-  const Hap = "birthday ";
+  const Hap = "birthday";
 
   return (
     <Box>
