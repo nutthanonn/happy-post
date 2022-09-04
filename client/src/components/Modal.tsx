@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import avatar from "../assets/avatar.png";
 import { keyframes } from "@emotion/react";
+import Draggable from "react-draggable"; // The default
 
 interface ModalProps {
   closeModal: () => void;
@@ -17,20 +18,22 @@ const Modal: FC<ModalProps> = (props) => {
 
   return (
     <Box onClick={handleClick}>
-      <Container>
-        <form action="">
-          <BoxTitle>
-            <Img src={avatar} />
-            <InputCustom
-              type="text"
-              placeholder="Name or Unnamed"
-              maxLength={20}
-            />
-          </BoxTitle>
-          <TextareaCustom placeholder="Have a great time on your birthday...."></TextareaCustom>
-          <Button>submit</Button>
-        </form>
-      </Container>
+      <Draggable>
+        <Container>
+          <form action="">
+            <BoxTitle>
+              <Img src={avatar} />
+              <InputCustom
+                type="text"
+                placeholder="Name or Unnamed"
+                maxLength={20}
+              />
+            </BoxTitle>
+            <TextareaCustom placeholder="Have a great time on your birthday...."></TextareaCustom>
+            <Button>submit</Button>
+          </form>
+        </Container>
+      </Draggable>
     </Box>
   );
 };
@@ -53,7 +56,7 @@ const Box = styled.div`
   left: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: ${openAnimation} 1s ease 1;
+  animation: ${openAnimation} 0.5s ease 1;
 `;
 
 const Container = styled.div`
@@ -66,6 +69,7 @@ const Container = styled.div`
   border-radius: 10px;
   border: 1px solid #ffc4d0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: move;
 
   > form {
     margin: 2rem;

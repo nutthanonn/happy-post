@@ -2,10 +2,12 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import Card from "../components/Card";
 import Navigation from "../share/Navigation";
+import Breadcrumb from "../share/Breadcrumb";
 
 const Post: FC = () => {
   return (
     <Box>
+      <Breadcrumb />
       <Navigation />
       <Contaienr>
         <Card
