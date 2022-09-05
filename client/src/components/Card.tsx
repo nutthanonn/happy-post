@@ -3,10 +3,11 @@ import { FC } from "react";
 import styled from "@emotion/styled";
 import { randomProfile } from "../helper/random_profile";
 import cake from "../assets/birthday-cake.png";
+import dayjs from "dayjs";
 
 interface CardProps {
-  name?: string;
-  time?: Date;
+  title: string;
+  time: string;
   detail: string;
 }
 
@@ -16,8 +17,10 @@ const Card: FC<CardProps> = (props) => {
       <CardHeader>
         <CardAvatar src={randomProfile()} />
         <CardTitle>
-          <CardName>From Example</CardName>
-          <CardTime>3 Sept 2022</CardTime>
+          <CardName>From {props.title}</CardName>
+          <CardTime>
+            {dayjs(props.time).format("HH:mm:A  DD/MMM/YYYY")}
+          </CardTime>
         </CardTitle>
         <CardIcon src={cake} />
       </CardHeader>

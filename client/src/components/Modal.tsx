@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import styled from "@emotion/styled";
 import avatar from "../assets/avatar.png";
+import axios from "axios";
 import { keyframes } from "@emotion/react";
 
 interface ModalProps {
@@ -13,6 +14,10 @@ const Modal: FC<ModalProps> = (props) => {
   const [detail, setDetail] = useState<string>("");
   const [err, setErr] = useState<boolean>(false);
 
+  async function savePost(data: { title: string; detail: string }) {
+    await axios.post("http://localhost:8080/post", JSON.stringify(data));
+  }
+
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (e.target === e.currentTarget) {
@@ -21,12 +26,13 @@ const Modal: FC<ModalProps> = (props) => {
   };
 
   const handleSubmit = (e: React.SyntheticEvent) => {
-    e.preventDefault();
     if (detail.length === 0) {
       setErr(true);
     } else {
       props.closeModal();
       props.openSnack();
+      savePost({ title, detail });
+      window.location.reload();
     }
   };
 
