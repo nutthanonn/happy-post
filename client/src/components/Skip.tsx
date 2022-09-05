@@ -1,11 +1,18 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { device } from "../common/screensize";
+import { useNavigate } from "react-router-dom";
 
 const Skip: FC = () => {
+  const navigate = useNavigate();
+
+  const pushPath = () => {
+    navigate("/post");
+  };
+
   return (
     <div>
-      <Text href="/post">Click to see all post</Text>
+      <Text onClick={pushPath}>Click to see all post</Text>
     </div>
   );
 };
