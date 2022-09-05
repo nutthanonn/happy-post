@@ -3,8 +3,13 @@ module github.com/nutthanonn/opensource-happy-birthday-website/tree/main/server
 go 1.17
 
 require (
+	github.com/gin-gonic/gin v1.8.1
+	github.com/joho/godotenv v1.4.0
+	github.com/lib/pq v1.10.6
+)
+
+require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.8.1 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.0 // indirect
